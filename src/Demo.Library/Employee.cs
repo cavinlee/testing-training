@@ -7,6 +7,7 @@ namespace Demo.Library
         public Employee()
         {
             _IsActive = true;
+            CreatedAt = DateTimeOffset.Now;;
         }
 
         public void Copy(Employee employee)
@@ -74,5 +75,10 @@ namespace Demo.Library
 
         private bool _IsActive;
         public virtual bool IsActive => _IsActive;
+
+        public virtual void Update()
+        {
+            UpdatedAt = DateTimeOffset.Now;
+        }
     }
 }
