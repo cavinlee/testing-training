@@ -10,7 +10,7 @@ namespace Demo.Library
 
     public class Generator : IGenerator
     {
-        protected readonly ILogger Logger = new DummyLogger();
+        protected readonly ILogger Logger = new DatabaseLogger();
 
         public string Generate()
         {

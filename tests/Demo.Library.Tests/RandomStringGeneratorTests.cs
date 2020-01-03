@@ -26,6 +26,7 @@ namespace Demo.Library.Tests
             {
                 IsAllUppercase = true
             };
+
             var consoleLogger = new ConsoleLogger();
             var randomStringGenerator = new RandomStringGenerator(randomStringGeneratorOptions, consoleLogger);
 

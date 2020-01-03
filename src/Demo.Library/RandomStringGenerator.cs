@@ -36,6 +36,8 @@ namespace Demo.Library
                 random = random.ToLower();
             }
 
+            Logger.Log(random);
+
             return random;
         }
     }

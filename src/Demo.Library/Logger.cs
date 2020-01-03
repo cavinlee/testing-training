@@ -15,10 +15,11 @@ namespace Demo.Library
         }
     }
 
-    public class DummyLogger : ILogger
+    public class DatabaseLogger : ILogger
     {
         public void Log(string message)
         {
+            // sql
         }
     }
 

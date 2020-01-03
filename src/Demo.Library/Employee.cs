@@ -6,8 +6,8 @@ namespace Demo.Library
     {
         public Employee()
         {
-            _IsActive = true;
-            CreatedAt = DateTimeOffset.Now;;
+            _IsActive = false;
+            CreatedAt = DateTimeOffset.Now;
         }
 
         public void Copy(Employee employee)
@@ -79,6 +79,12 @@ namespace Demo.Library
         public virtual void Update()
         {
             UpdatedAt = DateTimeOffset.Now;
+        }
+
+        public void Deactivate()
+        {
+            _IsActive = false;
+            Update();
         }
     }
 }

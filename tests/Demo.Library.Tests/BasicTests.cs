@@ -10,17 +10,17 @@ namespace Demo.Library.Tests
         [Fact]
         public void Can_See_This_Test_Case_In_Test_Explorer()
         {
-
         }
 
         [Theory]
         [InlineData(6, 2, true)]
         [InlineData(6, 3, true)]
         [InlineData(6, 5, false)]
+        [InlineData(8, 3, false)]
         public void Can_See_These_Parameterized_Test_Case_In_Test_Explorer(int number, int factor, bool isExpected)
         {
             var balance = number % factor;
-
+            
             var isZero = balance == 0;
 
             isZero.ShouldBe(isExpected);

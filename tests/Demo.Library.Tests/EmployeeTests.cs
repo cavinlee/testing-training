@@ -57,10 +57,10 @@ namespace Demo.Library.Tests
         }
 
         [Fact]
-        public void Employee_Is_Active_by_Default_When_Created()
+        public void Employee_Is_Not_Active_by_Default_When_Created()
         {
             var employee = Fixture.Build<Employee>().Create();
-            employee.IsActive.ShouldBeTrue();
+            employee.IsActive.ShouldBeFalse();
         }
     }
 }
